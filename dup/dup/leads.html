@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leads - Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <h1>Rioskill Hub</h1>
+        </div>
+        <div class="admin-info">
+            <span>Admin: ST</span>
+            <button class="logout">Logout</button>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="course.html">Courses</a></li> <!-- Active link -->
+                <li><a href="students.html">Students</a></li>
+                <li><a href="payment.html">Payments</a></li>
+                <li><a href="leads.html">Lead</a></li>
+                <li><a href="analysis.html">Analysis</a></li>
+                <li><a href="college-report.html" class="active">College Report</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Leads Section -->
+        <section class="leads-section">
+            <h2>Registered Leads</h2>
+            <table class="leads-table">
+                <thead>
+                    <tr>
+                        <th>Lead ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>Course Interested</th>
+                        <th>District</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>LD001</td>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>+123456789</td>
+                        <td>Full-Stack Development</td>
+                        <td>Ernakulam</td>
+                        <td>Lead</td>
+                        <td><button class="convert-btn btn" data-id="LD001" data-name="John Doe">Convert to Student</button></td>
+                    </tr>
+                    <tr>
+                        <td>LD002</td>
+                        <td>Jane Smith</td>
+                        <td>jane@example.com</td>
+                        <td>+987654321</td>
+                        <td>Data Science</td>
+                        <td>Kozhikode</td>
+                        <td>Lead</td>
+                        <td><button class="convert-btn btn" data-id="LD002" data-name="Jane Smith">Convert to Student</button></td>
+                    </tr>
+                    <!-- More leads can be added here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Rioskill Hub</p>
+        <nav>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </footer>
+
+    <script>
+        // Function to handle button click
+        document.querySelectorAll('.convert-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const leadId = this.getAttribute('data-id');
+                const leadName = this.getAttribute('data-name');
+
+                // Log the ID and name (for debugging)
+                console.log('Lead ID:', leadId);
+                console.log('Lead Name:', leadName);
+
+                // Here, you can make an AJAX request or any other action to convert lead to student
+                // Example: sending data to the server
+                convertLeadToStudent(leadId, leadName);
+            });
+        });
+
+        // Function to simulate converting lead to student
+        function convertLeadToStudent(id, name) {
+            alert(`Converting Lead ${name} (ID: ${id}) to a student.`);
+            // Perform your server-side logic here (e.g., making an API call)
+        }
+    </script>
+</body>
+</html>

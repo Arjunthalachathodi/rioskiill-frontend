@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Management - Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <h1>Rioskill Hub</h1>
+        </div>
+        <div class="admin-info">
+            <span>Admin: John Doe</span>
+            <button class="logout">Logout</button>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <!-- Sidebar -->
+<aside class="sidebar">
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li>
+                <a href="course.html">Courses</a> <!-- Main Courses Link -->
+                <ul class="submenu"> <!-- Submenu for Courses -->
+                    <li><a href="course-management.html">Course Management</a></li>
+                </ul>
+            </li>
+            <li><a href="students.html">Students</a></li>
+            <li><a href="payment.html">Payments</a></li>
+            <li><a href="leads.html">Lead</a></li>
+            <li><a href="analysis.html">Analysis</a></li>
+            <li><a href="college-report.html">College Report</a></li>
+        </ul>
+    </nav>
+</aside>
+
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content for Course Details -->
+    <main class="main-content">
+        <h2>Course Overview</h2>
+
+        
+       
+
+       <!-- Batch Information -->
+    <section class="batch-info">
+        <h3>Batch Details</h3>
+
+        <!-- Full-time Batch Table -->
+        <h4>Full-time Batch</h4>
+        <table class="batch-table">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Enrollment Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>FT001</td>
+                    <td>John Doe</td>
+                    <td>2024-09-10</td>
+                    <td>Active</td>
+                </tr>
+                <tr>
+                    <td>FT002</td>
+                    <td>Emily Davis</td>
+                    <td>2024-09-11</td>
+                    <td>Active</td>
+                </tr>
+                <!-- Add more full-time students as needed -->
+            </tbody>
+        </table>
+
+        <!-- Part-time Batch Table -->
+        <h4>Part-time Batch</h4>
+        <table class="batch-table">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Enrollment Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PT001</td>
+                    <td>Jane Smith</td>
+                    <td>2024-09-12</td>
+                    <td>Active</td>
+                </tr>
+                <tr>
+                    <td>PT002</td>
+                    <td>Michael Brown</td>
+                    <td>2024-09-13</td>
+                    <td>Active</td>
+                </tr>
+                <!-- Add more part-time students as needed -->
+            </tbody>
+        </table>
+    </section>
+          
+        <!-- Add New Student Section -->
+        <!-- <section class="add-student">
+            <h3>Add New Student</h3>
+            <form class="add-student-form">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" placeholder="Enter student name">
+
+                <label for="batchType">Batch Type</label>
+                <select id="batchType">
+                    <option value="full-time">Full-time</option>
+                    <option value="part-time">Part-time</option>
+                </select>
+
+                <label for="enrollmentDate">Enrollment Date</label>
+                <input type="date" id="enrollmentDate">
+
+                <button type="submit" class="btn submit-btn">Add Student</button>
+            </form>
+        </section> -->
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Rioskill Hub</p>
+        <nav>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </footer>
+
+</body>
+</html>

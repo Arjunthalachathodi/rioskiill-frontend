@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College-wise Report - Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for bar chart -->
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <h1>Rioskill Hub</h1>
+        </div>
+        <div class="admin-info">
+            <span>Admin: John Doe</span>
+            <button class="logout">Logout</button>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="payment.html">Payments</a></li>
+                <li><a href="leads.html">Leads</a></li>
+                <li><a href="analysis.html">Analysis</a></li>
+                <li><a href="college-report.html" >College Report</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h2>College-wise Report</h2>
+
+        <!-- College Report Data Table -->
+        <section class="college-report">
+            <h3>College Leads and Enrolled Students</h3>
+
+            <table class="college-report-table">
+                <thead>
+                    <tr>
+                        <th>College Name</th>
+                        <th>Number of Leads</th>
+                        <th>Number of Enrolled Students</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>XYZ College</td>
+                        <td>50</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>ABC University</td>
+                        <td>60</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td>LMN Institute</td>
+                        <td>80</td>
+                        <td>55</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Bar Chart -->
+            <canvas id="collegeBarChart" width="400" height="400"></canvas>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Rioskill Hub</p>
+        <nav>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </footer>
+
+    <script src="college-report.js"></script> <!-- External JS file for the chart data -->
+</body>
+</html>

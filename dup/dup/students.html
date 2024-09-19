@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students - Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header and Sidebar (Can reuse from the main dashboard) -->
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="students.html" class="active">Students</a></li> <!-- Active link -->
+                <li><a href="payment.html">Payments</a></li>
+                <li><a href="leads.html">Leads</a></li>
+                <li><a href="analysis.html">Analysis</a></li>
+                <li><a href="college-report.html" class="active">College Report</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="student-overview">
+            <!-- Cards Section -->
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Part-time Students</h3>
+                    <p id="partTimeTotal">0</p>
+                </div>
+                <div class="card">
+                    <h3>Total Full-time Students</h3>
+                    <p id="fullTimeTotal">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="student-page">
+            <!-- Search and Filter Section -->
+            <div class="search-filter">
+                <input type="text" id="searchInput" placeholder="Search by student name or course">
+                <select id="courseFilter">
+                    <option value="">Search By</option>
+                    <option value="name">Name</option>
+                    <option value="course">Course</option>
+                    <option value="college">College</option>
+                </select>
+                
+                <button class="btn" onclick="applyFilters()">Apply Filters</button>
+            </div>
+
+            <!-- Students Table -->
+            <table class="students-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Status</th>
+                        <th>Date of Enrollment</th>
+                        <th>Batch Type</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentsTableBody">
+                    <tr>
+                        <td>John Doe</td>
+                        <td>Full-Stack Development</td>
+                        <td>Ongoing</td>
+                        <td>2024-01-15</td>
+                        <td>Full-time</td>
+                        <td>
+                            <button class="btn">Delete</button>
+                            <button class="btn">Edit</button>
+                            <button class="btn">More Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>Data Science</td>
+                        <td>Completed</td>
+                        <td>2023-09-20</td>
+                        <td>Part-time</td>
+                        <td>
+                            <button class="btn">Delete</button>
+                            <button class="btn">Edit</button>
+                            <button class="btn">More Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Michael Brown</td>
+                        <td>Web Design</td>
+                        <td>Ongoing</td>
+                        <td>2024-03-05</td>
+                        <td>Part-time</td>
+                        <td>
+                            <button class="btn">Delete</button>
+                            <button class="btn">Edit</button>
+                            <button class="btn">More Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Emily Johnson</td>
+                        <td>Cybersecurity</td>
+                        <td>Completed</td>
+                        <td>2023-12-10</td>
+                        <td>Full-time</td>
+                        <td>
+                            <button class="btn">Delete</button>
+                            <button class="btn">Edit</button>
+                            <button class="btn">More Details</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer (Can reuse from the main dashboard) -->
+
+    <script src="script.js"></script>
+</body>
+</html>

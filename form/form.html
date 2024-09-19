@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rio SkillHub Registration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>  
+  <body>
+    <div class="hero-section">
+      <h1>Master the Skills That Matter in IT</h1>
+    </div>
+
+    <div class="container">
+      <div class="logo">
+        <img src="logo.png" alt="Rio SkillHub Logo" />
+      </div>
+
+      <form id="registrationForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+
+        <label for="contact">Contact Number:</label>
+        <input type="tel" id="contact" name="contact" />
+        <label for="district">District:</label>
+        <select id="district" name="district">
+          <option value="Alappuzha">Alappuzha</option>
+          <option value="Ernakulam">Ernakulam</option>
+          <option value="Idukki">Idukki</option>
+          <option value="Kannur">Kannur</option>
+          <option value="Kasaragod">Kasaragod</option>
+          <option value="Kollam">Kollam</option>
+          <option value="Kottayam">Kottayam</option>
+          <option value="Kozhikode">Kozhikode</option>
+          <option value="Master">Malappuram</option>
+          <option value="Palakkad">Palakkad</option>
+          <option value="Pathanamthitta">Pathanamthitta</option>
+          <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+          <option value="Thrissur">Thrissur</option>
+          <option value="Wayanad">Wayanad</option>
+        </select>
+        
+
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="course" />
+
+        <label for="status">Passout or Studying:</label>
+        <select id="status" name="status">
+          <option value="studying">Studying</option>
+          <option value="passout">Passout</option>
+        </select>
+
+        <label for="college">College Name:</label>
+        <input type="text" id="college" name="college" />
+
+        <label>Previously Attended Course:</label>
+        <label>
+          <input
+            type="radio"
+            name="attendedCourse"
+            value="yes"
+            onclick="toggleCourseInput(true)"
+          />
+          Yes
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="attendedCourse"
+            value="no"
+            onclick="toggleCourseInput(false)"
+          />
+          No
+        </label>
+
+        <div id="courseDetails" class="hidden">
+          <label for="courseCount">How many courses have you completed?</label>
+          <div class="number-input">
+            <button type="button" onclick="decrementCourseCount()">-</button>
+            <input
+              type="number"
+              id="courseCount"
+              name="courseCount"
+              min="1"
+              value="1"
+              oninput="createCourseInputs()"
+              readonly
+            />
+            <button type="button" onclick="incrementCourseCount()">+</button>
+          </div>
+          <div id="courseInputs"></div>
+        </div>
+
+        <label for="batch">Batch Type:</label>
+        <select id="batch" name="batch">
+          <option value="full-time">Full-Time</option>
+          <option value="part-time">Part-Time</option>
+        </select>
+
+        <label for="whychoose">Why Should We Choose You?</label>
+        <textarea id="whychoose" name="whychoose" rows="4"></textarea>
+
+        <label for="howknow">How Did You Know About Us?</label>
+        <input type="text" id="howknow" name="howknow" />
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div class="contact">
+        <p>📞 +91 77365 81105</p>
+        <p><a href="https://www.rioskillhub.com">www.rioskillhub.com</a></p>
+      </div>
+    </div>
+    <script src="form.js"></script>
+  </body>
+</html>

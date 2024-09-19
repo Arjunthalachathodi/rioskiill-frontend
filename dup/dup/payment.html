@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments - Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for the donut chart -->
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <h1>Rioskill Hub</h1>
+        </div>
+        <div class="admin-info">
+            <span>Admin: John Doe</span>
+            <button class="logout">Logout</button>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="payment.html">Payments</a></li>
+                <li><a href="leads.html">Lead</a></li>
+                <li><a href="analysis.html">Analysis</a></li>
+                <li><a href="college-report.html" >College Report</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content for Payments -->
+    <main class="main-content">
+        <h2>Payments Overview</h2>
+
+        <!-- Payment Tracking Section -->
+        <section class="payment-tracking">
+            <h3>Track Student Payments</h3>
+            <table class="payment-table">
+                <thead>
+                    <tr>
+                        <th>Payment ID</th>
+                        <th>Student Name</th>
+                        <th>Course</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>John Doe</td>
+                        <td>Web Development</td>
+                        <td>$500</td>
+                        <td><span class="status paid">Paid</span></td>
+                        <td>2024-09-12</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Jane Smith</td>
+                        <td>Data Science</td>
+                        <td>$750</td>
+                        <td><span class="status unpaid">Unpaid</span></td>
+                        <td>2024-09-14</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Payment Report Section -->
+        <section class="payment-report">
+            <h3>Payment Report</h3>
+
+            <!-- Data Table -->
+            <table class="payment-report-table">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Amount Paid</th>
+                        <th>Amount Due</th>
+                        <th>Payment Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>$500</td>
+                        <td>$0</td>
+                        <td>Fully Paid</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>$400</td>
+                        <td>$350</td>
+                        <td>Partially Paid</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Brown</td>
+                        <td>$0</td>
+                        <td>$600</td>
+                        <td>Not Paid</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Donut Chart -->
+            <canvas id="paymentDonutChart" width="400" height="400"></canvas>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Rioskill Hub</p>
+        <nav>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script> <!-- External JS file for handling data -->
+</body>
+</html>

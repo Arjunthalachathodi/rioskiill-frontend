@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Rioskill Hub Logo" width="150">
+        </div>
+        <div class="admin-info">
+            <span>Admin: ST</span>
+            <button class="logout">Logout</button>
+        </div>
+    </header>
+
+<!-- Sidebar -->
+<aside class="sidebar">
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="students.html">Students</a></li>
+            <li><a href="course.html">Courses</a></li>
+            <li><a href="payment.html" >Payments</a></li>
+            <li><a href="leads.html">Lead</a></li>
+            <li><a href="analysis.html">Analysis</a></li>
+            <li><a href="college-report.html">College Report</a></li>
+        </ul>
+    </nav>
+</aside>
+
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Summary Cards -->
+        <section class="summary-cards">
+            <div class="card">
+                <h3>Total Students</h3>
+                <p>1234</p>
+            </div>
+            <div class="card">
+                <h3>Ongoing Students</h3>
+                <p>567</p>
+            </div>
+            <div class="card">
+                <h3>Monthly Admissions</h3>
+                <p>89</p>
+            </div>
+            <div class="card">
+                <h3>Payments Overview</h3>
+                <p>$45,000</p>
+            </div>
+        </section>
+
+        <!-- Charts Section -->
+        <section class="charts">
+            <!-- Student Growth Over Time -->
+            <div class="chart-container">
+                <h3>Student Growth Over Time</h3>
+                <canvas id="studentGrowthChart"></canvas>
+            </div>
+
+            <!-- Enrollment Trends by Course -->
+            <div class="chart-container">
+                <h3>Enrollment Trends by Course</h3>
+                <canvas id="enrollmentTrendsChart"></canvas>
+            </div>
+
+            <!-- Revenue and Payments Analysis -->
+            <div class="chart-container">
+                <h3>Revenue and Payments Analysis</h3>
+                <canvas id="revenueChart"></canvas>
+            </div>
+
+            <!-- Student Demographics Breakdown -->
+            <div class="chart-container">
+                <h3>Student Demographics Breakdown</h3>
+                <canvas id="demographicsChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Rioskill Hub</p>
+        <nav>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
