@@ -29,7 +29,6 @@
                 <li><a href="students.html">Students</a></li>
                 <li><a href="course.html">Courses</a></li>
                 <li><a href="payment.html" class="active">Payments</a></li>
-                <li><a href="payment-report.html">Payment reports</a></li>
                 <li><a href="leads.html">Lead</a></li>
                 <li><a href="analysis.html">Analysis</a></li>
                 <li><a href="college-report.html" >College Report</a></li>
@@ -41,40 +40,45 @@
     <main class="main-content">
         <h2>Payments Overview</h2>
 
-        <!-- Payment Tracking Section -->
-        <section class="payment-tracking">
-            <h3>Track Student Payments</h3>
-            <table class="payment-table">
-                <thead>
-                    <tr>
-                        <th>Payment ID</th>
-                        <th>Student Name</th>
-                        <th>Course</th>
-                        <th>Amount</th>
-                        <th>Status</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>001</td>
-                        <td>John Doe</td>
-                        <td>Web Development</td>
-                        <td>$500</td>
-                        <td><span class="status paid">Paid</span></td>
-                        <td>2024-09-12</td>
-                    </tr>
-                    <tr>
-                        <td>002</td>
-                        <td>Jane Smith</td>
-                        <td>Data Science</td>
-                        <td>$750</td>
-                        <td><span class="status unpaid">Unpaid</span></td>
-                        <td>2024-09-14</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <!-- Payment Report Section -->
+<section class="payment-report">
+    <h3>Payment Report</h3>
+
+    <!-- Data Table -->
+    <table class="payment-report-table">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Amount Paid</th>
+                <th>Amount Due</th>
+                <th>Payment Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>$500</td>
+                <td>$0</td>
+                <td>Fully Paid</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>$400</td>
+                <td>$350</td>
+                <td>Partially Paid</td>
+            </tr>
+            <tr>
+                <td>Michael Brown</td>
+                <td>$0</td>
+                <td>$600</td>
+                <td>Not Paid</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Donut Chart -->
+    <canvas id="paymentDonutChart" width="400" height="400"></canvas>
+</section>
 
         
     </main>
