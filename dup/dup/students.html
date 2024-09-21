@@ -18,7 +18,7 @@
                 <li><a href="index.html">Dashboard</a></li>
                 <li><a href="students.html" class="active">Students</a></li>
                 <li><a href="course.html">Courses</a></li>
-                <li><a href="payment.html" >Payments</a></li>
+                <li><a href="payment.html">Payments</a></li>
                 <li><a href="leads.html">Registration</a></li>
                 <li><a href="analysis.html">Analysis</a></li>
                 <li><a href="college-report.html">College Report</a></li>
@@ -29,7 +29,8 @@
     <!-- Main Content -->
     <main class="main-content">
         <section class="student-overview">
-            <!-- Cards Section -->
+            <h2>Students Enrolled</h2>
+            <p>View and manage all enrolled students</p>
             <div class="cards">
                 <div class="card">
                     <h3>Total Part-time Students</h3>
@@ -45,14 +46,28 @@
         <section class="student-page">
             <!-- Search and Filter Section -->
             <div class="search-filter">
-                <input type="text" id="searchInput" placeholder="Search by student name or course">
-                <select id="courseFilter">
-                    <option value="">Search By</option>
-                    <option value="name">Name</option>
-                    <option value="course">Course</option>
-                    <option value="college">College</option>
+                <label for="search">Search:</label>
+                <input type="text" id="search" placeholder="Search students...">
+                <button>Search</button>
+
+                <label for="course">Course:</label>
+                <select id="course">
+                    <option value="">Select Course</option>
+                    <option value="it-basics">IT Basics</option>
+                    <option value="web-dev">Web Development</option>
                 </select>
-                
+
+                <label for="batch">Batch:</label>
+                <select id="batch">
+                    <option value="">Select Batch</option>
+                    <option value="full-time">Full-time</option>
+                    <option value="part-time">Part-time</option>
+                </select>
+
+                <label for="enrollment-from">Enrollment Date:</label>
+                <input type="date" id="enrollment-from">
+                <input type="date" id="enrollment-to">
+
                 <button class="btn" onclick="applyFilters()">Apply Filters</button>
             </div>
 
@@ -119,11 +134,14 @@
                     </tr>
                 </tbody>
             </table>
+            <div>
+                <button>[Export List]</button>
+                
+            </div>
         </section>
     </main>
 
-    <!-- Footer (Can reuse from the main dashboard) -->
-
     <script src="script.js"></script>
 </body>
+
 </html>
