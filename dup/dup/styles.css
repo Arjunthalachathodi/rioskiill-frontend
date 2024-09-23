@@ -420,3 +420,24 @@ canvas {
 canvas {
     margin-top: 20px;
 }
+
+
+
+/* Style for suggestions container */
+.suggestions-dropdown {
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute; /* Positioning for dropdown */
+    background: white;
+    z-index: 1000;
+}
+
+.suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}

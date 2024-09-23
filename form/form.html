@@ -17,105 +17,51 @@
       </div>
 
       <form id="registrationForm">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" />
-
+        <!-- Name -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+      
+        <!-- Email -->
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" />
-
+        <input type="email" id="email" name="email" required><br><br>
+      
+        <!-- Contact -->
         <label for="contact">Contact Number:</label>
-        <input type="tel" id="contact" name="contact" />
+        <input type="tel" id="contact" name="contact" required><br><br>
+      
+        <!-- District (Dropdown) -->
         <label for="district">District:</label>
-        <select id="district" name="district">
-          <option value="Alappuzha">Alappuzha</option>
-          <option value="Ernakulam">Ernakulam</option>
-          <option value="Idukki">Idukki</option>
-          <option value="Kannur">Kannur</option>
-          <option value="Kasaragod">Kasaragod</option>
-          <option value="Kollam">Kollam</option>
-          <option value="Kottayam">Kottayam</option>
-          <option value="Kozhikode">Kozhikode</option>
-          <option value="Master">Malappuram</option>
-          <option value="Palakkad">Palakkad</option>
-          <option value="Pathanamthitta">Pathanamthitta</option>
-          <option value="Thiruvananthapuram">Thiruvananthapuram</option>
-          <option value="Thrissur">Thrissur</option>
-          <option value="Wayanad">Wayanad</option>
-        </select>
-        
-
+        <select id="district" name="district" required>
+          <option value="">Select District</option>
+          <!-- Dynamic Options Filled from JS -->
+        </select><br><br>
+      
+        <!-- Course (Autocomplete) -->
         <label for="course">Course:</label>
-        <input type="text" id="course" name="course" />
+    <select id="course"></select>
+    <input type="text" id="courseSearch" placeholder="Search for a course...">
 
+    <label for="college">College:</label>
+    <input type="text" id="collegeInput" placeholder="Type the college name...">
+    <div id="collegeSuggestions" class="suggestions-dropdown"></div>
+        <!-- Status -->
         <label for="status">Passout or Studying:</label>
-        <select id="status" name="status">
+        <select id="status" name="status" required>
           <option value="studying">Studying</option>
           <option value="passout">Passout</option>
-        </select>
-        <label for="status">Batch:</label>
-        <select id="status" name="status">
-          <option value="studying">Fulltime</option>
-          <option value="passout">Partime</option>
-        </select>
-        <label for="status">Course selected in rioskillhub:</label>
-        <select id="status" name="status">
-          <option value="studying">Fullstack development mastery</option>
-        </select>
-        <label for="college">College Name:</label>
-        <input type="text" id="college" name="college" />
-
-        <label>Previously Attended Course:</label>
-        <label>
-          <input
-            type="radio"
-            name="attendedCourse"
-            value="yes"
-            onclick="toggleCourseInput(true)"
-          />
-          Yes
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="attendedCourse"
-            value="no"
-            onclick="toggleCourseInput(false)"
-          />
-          No
-        </label>
-
-        <div id="courseDetails" class="hidden">
-          <label for="courseCount">How many courses have you completed?</label>
-          <div class="number-input">
-            <button type="button" onclick="decrementCourseCount()">-</button>
-            <input
-              type="number"
-              id="courseCount"
-              name="courseCount"
-              min="1"
-              value="1"
-              oninput="createCourseInputs()"
-              readonly
-            />
-            <button type="button" onclick="incrementCourseCount()">+</button>
-          </div>
-          <div id="courseInputs"></div>
-        </div>
-
-        <label for="batch">Batch Type:</label>
-        <select id="batch" name="batch">
-          <option value="full-time">Full-Time</option>
-          <option value="part-time">Part-Time</option>
-        </select>
-
+        </select>      
+        <!-- Why Choose You -->
         <label for="whychoose">Why Should We Choose You?</label>
-        <textarea id="whychoose" name="whychoose" rows="4"></textarea>
-
+        <textarea id="whychoose" name="whychoose" required></textarea><br><br>
+      
+        <!-- How Did You Know About Us -->
         <label for="howknow">How Did You Know About Us?</label>
-        <input type="text" id="howknow" name="howknow" />
-
+        <textarea id="howknow" name="howknow" required></textarea><br><br>
+      
+        <!-- Submit -->
         <button type="submit">Submit</button>
       </form>
+      
 
       <div class="contact">
         <p>📞 +91 77365 81105</p>
