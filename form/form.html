@@ -16,34 +16,39 @@
         <img src="logo.png" alt="Rio SkillHub Logo" />
       </div>
 
-      <form id="registrationForm">
+      <form id="registrationForm" method="post">
         <!-- Name -->
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+        <input type="text" id="name" name="name" required>
       
         <!-- Email -->
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" required>
       
         <!-- Contact -->
         <label for="contact">Contact Number:</label>
-        <input type="tel" id="contact" name="contact" required><br><br>
+        <input type="tel" id="contact" name="contact" required>
       
         <!-- District (Dropdown) -->
         <label for="district">District:</label>
         <select id="district" name="district" required>
           <option value="">Select District</option>
           <!-- Dynamic Options Filled from JS -->
-        </select><br><br>
+        </select>
       
         <!-- Course (Autocomplete) -->
         <label for="course">Course:</label>
-    <select id="course"></select>
-    <input type="text" id="courseSearch" placeholder="Search for a course...">
-
-    <label for="college">College:</label>
-    <input type="text" id="collegeInput" placeholder="Type the college name...">
-    <div id="collegeSuggestions" class="suggestions-dropdown"></div>
+        <select id="course" name="course" required>
+          <option value="">Select District</option>
+          <!-- Dynamic Options Filled from JS -->
+        </select>
+    
+     <!-- collage -->
+     <label for="college">Choose College:</label>
+     <select id="college" name="college" required>
+      <option value="">Select College</option>
+      <!-- Dynamic Options Filled from JS -->
+    </select>
         <!-- Status -->
         <label for="status">Passout or Studying:</label>
         <select id="status" name="status" required>
@@ -52,11 +57,11 @@
         </select>      
         <!-- Why Choose You -->
         <label for="whychoose">Why Should We Choose You?</label>
-        <textarea id="whychoose" name="whychoose" required></textarea><br><br>
+        <textarea id="whychoose" name="whychoose" required></textarea>
       
         <!-- How Did You Know About Us -->
         <label for="howknow">How Did You Know About Us?</label>
-        <textarea id="howknow" name="howknow" required></textarea><br><br>
+        <textarea id="howknow" name="howknow" required></textarea>
       
         <!-- Submit -->
         <button type="submit">Submit</button>
